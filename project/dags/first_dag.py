@@ -7,15 +7,11 @@ try:
 except Exception as e:
     print("Error {}".format(e))
 
-def first_function_execute(**context):
+def first_function_execute(**kwargs):
     print("First Fucntion Execute")
     variable = kwargs.get("name","Did not get the key")
     return "Hello World " + variable
 
-def second_function_execute(*args, **kwargs):
-    variable = kwargs.get("name2","Did not get the key")
-    print("Hello World :{}".format(variable))
-    return "Hello World " + variable
 
 with DAG(
         dag_id="first_dag", #dag title
